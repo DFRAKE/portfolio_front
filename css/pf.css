@@ -1,4 +1,74 @@
+
+/* ===== 1. 색상 변수 ===== */
+:root {  
+    --color-bg: #ffffff;        /* 배경색 : 흰색 */
+    --color-text: #222222;      /* 글자색 : 진한 회색 */
+    --color-accent: #2563eb;    /* 강조색 : 파란색 */
+}
+
+/* ===== 2. 전역 기본 스타일 (body 전체) ===== */
 body {
     max-width: 800px;
-    margin: 100px auto;;
+    margin: 100px auto;
+    font-family: "Pretendard", "Apple SD Gothic Neo", sans-serif;   /* 폰트설정 */
+    background-color: var(--color-bg);
+    color: var(--color-text);
+}
+
+/* ===== 3. 공통 레이아웃 (섹션/제목 공통 스타일) ===== */
+section {
+    margin-bottom: 60px;
+}
+
+h2 {
+    font-size: 24px;
+    border-bottom: 2px solid var(--color-accent);
+    padding-bottom: 8px;
+    margin-bottom: 20px;
+}
+
+/* ===== 4. Header / Nav ===== */
+nav ul {
+  display: flex;
+  gap: 40px;
+}
+
+nav a {
+    text-decoration: none;
+    color:var(--color-accent);
+}
+
+/* ===== 5. About ===== */
+#about dl {
+    display: grid;
+    grid-template-columns: 120px 1fr;
+    row-gap: 12px;
+}
+
+#about dt {
+    font-weight: bold;
+    color: var(--color-accent);
+}
+
+#about dd {
+    margin: 0;
+}
+
+/* ===== 6. Skills ===== */
+.skill-group {
+    margin-bottom: 24px;
+}
+#skills ul {
+    display: flex;
+    gap: 12px;
+    list-style: none;
+    flex-wrap: wrap;
+}
+
+#skills li {
+    background-color: #eef2ff;
+    color: var(--color-accent);
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 14px;
 }

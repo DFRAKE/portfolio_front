@@ -6,7 +6,9 @@
     <link rel="stylesheet" href="../css/pf.css">
     <title>포트폴리오</title>
   </head>
-  <body> 
+  <body>  
+
+    <!-- ===== Header: 이름 / 한줄소개 / nav ===== -->
     <header>
       <h1>김승진</h1>
       <p>백엔드 지향 / AI 활용 개발자를 꿈꾸는 신입</p>
@@ -22,43 +24,93 @@
     </header>
     
     <main>
-      <!-- About Section -->
+      
+      <!-- ===== About ===== -->
       <section id="about">
         <h2>About</h2>
-        <p>자기소개~</p>
-      </section>
-      <!-- Skills Section -->
-      <section id="skills">
-        <h2>Skills</h2>
-        <ul>
-          <li>HTML / CSS</li>
-          <li>JavaScript</li>
-          <li>Python</li>
-          <li>Java</li>
-          <li>SQL</li>
-        </ul>
+        <p>자기소개</p>
+
+        <dl>
+          <dt>이름</dt>
+          <dd>김승진</dd>
+
+          <dt>학력</dt>
+          <dd>00대학교 000학과 재학</dd>
+
+          <dt>관심분야</dt>
+          <dd>백엔드 / 보안</dd>
+
+          <dt>현재 과정</dt>
+          <dd>LG CNS AM Inspire Camp 6기</dd>
+        </dl>
       </section>
 
-      <!-- Projects Section -->
+      <!-- ===== Skills ===== -->
+      <section id="skills">
+        <h2>Skills</h2>
+
+        <!-- 사용 언어 -->
+        <div class="skill-group">
+          <h3>Language</h3>
+          <ul>
+            <li>Java</li>
+            <li>SQL</li>
+            <li>Python</li>
+            <li>C</li>
+            <li>C++</li>
+          </ul>
+        </div>
+
+        <!-- 프론트엔드 -->
+        <div class="skill-group">
+          <h3>Frontend</h3>
+          <ul>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+          </ul>
+        </div>
+
+        <!-- 백엔드 -->
+        <div class="skill-group">
+          <h3>Backend</h3>
+          <ul>
+            <li>Spring Boot</li>
+            <li>MyBatis</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- ===== Projects Section ===== -->
       <section id="projects">
         <h2>Projects</h2>
 
         <article>
-          <h3> 프로젝트 이름</h3>
+          <h3>포트폴리오 웹사이트</h3>
+          <p>HTML/CSS로 시작해서 JS, React로 확장 예정인 개인 포트폴리오</p>
+          <p>기술 스택: HTML, CSS, JavaScript, React</p>
+          <a href="https://github.com/DFRAKE/portfolio_front">Github</a>
+        </article>
+        
+        <!-- 추가 다른 프로젝트 -->
+        <article>
+          <h3>프로젝트 이름</h3>
           <p>프로젝트 설명</p>
+          <p>기술 스택: 기술1, 기술2, 기술3</p>
+          <a href="https://github.com">Github</a>
         </article>
       </section>
 
-      <!-- Contact Section -->
+      <!-- ===== Contact Section ===== -->
        <section id="contact">
         <h2>Contact</h2>
         <p>Email : 000@example.com</p>
         <p>Phone : 010-0000-0000</p>
         <p><a href="https://github.com">>>GitHub<<</a></p>
-        <p><a href="https://velog.com">>>Velog<<</a></p>
+        <p><a href="https://velog.io/@dfrake/posts">>>Velog<<</a></p>
        </section>
     </main>
 
-  
+
   </body>
 </html>
