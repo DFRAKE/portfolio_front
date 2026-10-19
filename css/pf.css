@@ -1,74 +1,294 @@
-
 /* ===== 1. 색상 변수 ===== */
-:root {  
-    --color-bg: #ffffff;        /* 배경색 : 흰색 */
-    --color-text: #222222;      /* 글자색 : 진한 회색 */
-    --color-accent: #2563eb;    /* 강조색 : 파란색 */
+:root {
+    --color-bg: #f7f6f2;
+    /* 배경색: 따뜻한 회색 */
+    --color-text: #292524;
+    /* 기본 글자색 */
+    --color-accent: #57534e;
+    /* 강조색 */
 }
 
-/* ===== 2. 전역 기본 스타일 (body 전체) ===== */
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 24px;
+}
+
+
+/* ===== 2. 기본 스타일 ===== */
 body {
-    max-width: 800px;
-    margin: 100px auto;
-    font-family: "Pretendard", "Apple SD Gothic Neo", sans-serif;   /* 폰트설정 */
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 24px;
+    font-family: 'Pretendard', Apple SD Gothic Neo, sans-serif;
     background-color: var(--color-bg);
     color: var(--color-text);
 }
 
-/* ===== 3. 공통 레이아웃 (섹션/제목 공통 스타일) ===== */
-section {
-    margin-bottom: 60px;
+/* ===== 3. 공통 레이아웃 ===== */
+main>section {
+    margin-bottom: 24px;
+    animation: section-appear 0.4s ease-out;
+}
+
+@keyframes section-appear {
+    from {
+        opacity: 0;
+        transform: translateY(16px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 h2 {
-    font-size: 24px;
-    border-bottom: 2px solid var(--color-accent);
-    padding-bottom: 8px;
-    margin-bottom: 20px;
+    margin: 0 0 24px;
+    font-size: 28px;
+    font-weight: 700;
 }
 
-/* ===== 4. Header / Nav ===== */
-nav ul {
-  display: flex;
-  gap: 40px;
+/* ===== 4. 첫 화면 / 메뉴 ===== */
+.site-header {
+    min-height: 100svh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 32px;
+    padding: 48px 0;
+    box-sizing: border-box;
 }
 
-nav a {
+.site-header .hero {
+    padding: 0;
+}
+
+.hero h1 {
+    margin: 0 0 16px;
+    font-size: clamp(40px, 8vw, 80px);
+    font-weight: 800;
+    line-height: 1.1;
+}
+
+.hero-label {
+    margin: 0;
+    font-size: 20px;
+    color: var(--color-accent);
+}
+
+.site-header .side-nav {
+    position: static;
+    order: 1;
+    width: auto;
+}
+
+.side-nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.side-nav a {
+    display: block;
+    padding: 10px 16px;
+    border-radius: 999px;
+    background-color: #eae7e1;
+    color: var(--color-text);
     text-decoration: none;
-    color:var(--color-accent);
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.side-nav a:hover,
+.side-nav a:focus-visible {
+    background-color: #57534e;
+    color: #ffffff;
 }
 
 /* ===== 5. About ===== */
-#about dl {
-    display: grid;
-    grid-template-columns: 120px 1fr;
-    row-gap: 12px;
+
+#about>p {
+    margin: 0 0 24px;
+    font-size: 16px;
+    line-height: 1.8;
+    color: #555555;
 }
 
+/* About 정보 목록 */
+#about dl {
+    display: grid;
+    grid-template-columns: 100px 1fr;
+    gap: 16px;
+    margin: 0;
+    padding: 24px;
+    border: 1px solid #e3dfd8;
+    border-radius: 16px;
+    background-color: #fdfcf9;
+}
+
+
 #about dt {
-    font-weight: bold;
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 1.7;
     color: var(--color-accent);
 }
 
 #about dd {
     margin: 0;
+    font-size: 15px;
+    line-height: 1.7;
+    overflow-wrap: anywhere;
 }
 
 /* ===== 6. Skills ===== */
 .skill-group {
-    margin-bottom: 24px;
+    margin-bottom: 16px;
+    padding: 24px;
+    border: 1px solid #e3dfd8;
+    border-radius: 16px;
+    background-color: #fdfcf9;
 }
+
+.skill-group h3 {
+    margin: 0 0 16px;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1.4;
+}
+
 #skills ul {
     display: flex;
-    gap: 12px;
-    list-style: none;
     flex-wrap: wrap;
+    gap: 8px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
 }
 
 #skills li {
-    background-color: #eef2ff;
+    padding: 6px 12px;
+    border-radius: 999px;
+    background-color: #eae7e1;
     color: var(--color-accent);
-    padding: 8px 16px;
-    border-radius: 20px;
     font-size: 14px;
+    line-height: 1.5;
+}
+
+/* Contact */
+#contact a {
+    display: inline-block;
+    padding: 10px 16px;
+    border: 1px solid #e3dfd8;
+    border-radius: 10px;
+    background-color: #eae7e1;
+    color: var(--color-text);
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+#contact a:hover,
+#contact a:focus-visible {
+    background-color: #57534e;
+    color: #ffffff;
+}
+
+/* ===== 7. Projects ===== */
+
+.project-list {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.project-item {
+    padding: 24px;
+    border: 1px solid #e3dfd8;
+    border-radius: 16px;
+    background-color: #fdfcf9;
+}
+
+.project-item h3 {
+    margin: 0 0 12px;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.project-item p {
+    margin: 0 0 20px;
+    font-size: 16px;
+    line-height: 1.7;
+    color: #555555;
+}
+
+/* 프로젝트 기술 스택 */
+.project-stack {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 0 0 20px;
+    padding: 0;
+    list-style: none;
+}
+
+/* 기술 뱃지 */
+.project-stack li {
+    padding: 6px 12px;
+    border-radius: 999px;
+    background-color: #eae7e1;
+    color: var(--color-accent);
+    font-size: 14px;
+}
+
+.project-item a {
+    display: inline-block;
+    padding: 10px 16px;
+    border-radius: 10px;
+    background-color: var(--color-accent);
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background-color 0.2s, transform 0.2s;
+
+}
+
+
+/* 프로젝트 링크 반응 */
+.project-item a:hover,
+.project-item a:focus-visible {
+    background-color: #292524;
+    transform: translateY(-2px);
+}
+
+/* ===== 8. 모바일 화면 ===== */
+@media (max-width: 600px) {
+    body {
+        padding: 0 16px;
+    }
+
+    .side-nav ul {
+        gap: 8px;
+    }
+
+    .side-nav a {
+        padding: 8px 12px;
+        font-size: 14px;
+    }
+
+    .hero h1 {
+        font-size: 48px;
+    }
+
+    .hero-label {
+        font-size: 18px;
+    }
+
+    .project-item {
+        padding: 20px;
+    }
 }

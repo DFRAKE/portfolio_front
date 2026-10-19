@@ -1,32 +1,62 @@
 <!DOCTYPE html>
 <html lang="ko">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css">
-    <link rel="stylesheet" href="../css/pf.css">
-    <title>포트폴리오</title>
-  </head>
-  <body>  
 
-    <!-- ===== Header: 이름 / 한줄소개 / nav ===== -->
-    <header>
-      <h1>김승진</h1>
-      <p>백엔드 지향 / AI 활용 개발자를 꿈꾸는 신입</p>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css">
+  <link rel="stylesheet" href="../css/pf.css">
+  <title>포트폴리오</title>
+  <script src="../js/pf.js" defer></script>
+</head>
 
-      <nav>
-        <ul> 
-          <li><a href="#about">About</a></li>
-          <li><a href="#skills">Skills</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
+<body>
+  <header class="site-header">
+    <!-- 주요 메뉴 -->
+    <nav class="side-nav" aria-label="주요 메뉴">
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
       </nav>
+
+      <!-- 첫 화면 소개 -->
+      <div class="hero">
+        <h1>김승진</h1>
+        <p class="hero-label">Backend Developer</p>
+      </div>
+
     </header>
-    
+
     <main>
-      
-      <!-- ===== About ===== -->
+
+      <!-- Projects -->
+      <section id="projects">
+        <h2>Projects</h2>
+
+        <div class="project-list">
+          
+
+          <!-- 포트폴리오 프로젝트 -->
+          <article class="project-item">
+            <h3>포트폴리오 웹사이트</h3>
+            <p> 개발 과정과 프로젝트를 기록하는 개인 포트폴리오</p>
+
+            <ul class="project-stack">
+              <li>HTML</li>
+              <li>CSS</li>
+            </ul>
+
+            <a href="https://github.com/DFRAKE/portfolio_front">
+              Github
+            </a>
+          </article>
+        </div>
+      </section>
+
+      <!-- About -->
       <section id="about">
         <h2>About</h2>
         <p>자기소개</p>
@@ -46,7 +76,7 @@
         </dl>
       </section>
 
-      <!-- ===== Skills ===== -->
+      <!-- Skills -->
       <section id="skills">
         <h2>Skills</h2>
 
@@ -82,36 +112,21 @@
         </div>
       </section>
 
-      <!-- ===== Projects Section ===== -->
-      <section id="projects">
-        <h2>Projects</h2>
 
-        <article>
-          <h3>포트폴리오 웹사이트</h3>
-          <p>HTML/CSS로 시작해서 JS, React로 확장 예정인 개인 포트폴리오</p>
-          <p>기술 스택: HTML, CSS, JavaScript, React</p>
-          <a href="https://github.com/DFRAKE/portfolio_front">Github</a>
-        </article>
-        
-        <!-- 추가 다른 프로젝트 -->
-        <article>
-          <h3>프로젝트 이름</h3>
-          <p>프로젝트 설명</p>
-          <p>기술 스택: 기술1, 기술2, 기술3</p>
-          <a href="https://github.com">Github</a>
-        </article>
-      </section>
-
-      <!-- ===== Contact Section ===== -->
-       <section id="contact">
+      <!-- Contact -->
+      <section id="contact">
         <h2>Contact</h2>
         <p>Email : 000@example.com</p>
         <p>Phone : 010-0000-0000</p>
-        <p><a href="https://github.com">>>GitHub<<</a></p>
-        <p><a href="https://velog.io/@dfrake/posts">>>Velog<<</a></p>
-       </section>
+        <!-- 외부 링크 -->
+        <div class="contact-links">
+          <a href="https://github.com/DFRAKE">Github</a>
+          <a href="https://velog.io/@dfrake/posts">Velog</a>
+        </div>
+      </section>
     </main>
 
 
-  </body>
+</body>
+
 </html>
