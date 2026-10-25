@@ -15,6 +15,16 @@ HTML/CSS/JavaScript로 구성한 개인 포트폴리오 웹 화면입니다. 프
 
 이 저장소의 실행 코드는 HTML/CSS/JavaScript입니다. 화면에 기재된 Java·Spring Boot·MyBatis는 개인 기술 소개이며, 해당 백엔드 구현이 이 저장소에 포함되어 있다는 의미는 아닙니다.
 
+## 풀스택 프로젝트 기여
+
+Java·Spring Boot와 React를 연결한 팀 프로젝트 경험은 [TripAI](https://github.com/jnnxeo/MINI_PROJECT_1_Local_Culture_Tour_Guide)에서 확인할 수 있습니다.
+
+- [로그인·로그아웃 백엔드 API · PR #18](https://github.com/jnnxeo/MINI_PROJECT_1_Local_Culture_Tour_Guide/pull/18)
+- [React 로그인 화면·인증 상태 관리 · PR #19](https://github.com/jnnxeo/MINI_PROJECT_1_Local_Culture_Tour_Guide/pull/19)
+- [음식점 데이터 수집·전처리 · PR #42](https://github.com/jnnxeo/MINI_PROJECT_1_Local_Culture_Tour_Guide/pull/42)
+
+위 링크는 별도 팀 저장소의 기여 기록입니다. 이 저장소 자체는 정적 포트폴리오 화면입니다.
+
 ## 로컬에서 보기
 
 저장소 루트에서 실행합니다.
